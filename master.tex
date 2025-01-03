@@ -1,0 +1,107 @@
+\documentclass[a4paper, 12pt, openany]{book} %chose the paper size and font size. Openany ensures that all all chapters and similar may begin at any page, not only odd pages. For the introductory pages and appendices we want openany, but for chapter pages in the main content we want chapters to begin only on odd pages (right hand side). The book class ensures that the margins are automatically adjusted such that left hand pages are slightly moved to the left and vice versa at the right, which makes the thesis very readable and good looking when printed in bound book format.
+\input{./preamble.tex}	
+\author{Mikkel A Sokki}
+
+%\title{Boson and Fermion propagators in a constant magnetic field}
+%\title{symmetry breaking in \(\chi\)PT and Goldstone bosons}
+\title{Meson Goldstone bosons and symmetry breaking in \(\chi\)PT and pions as Goldstone bosons}
+\title{Symmetry breaking and Goldstone bosons in \(\chi\)PT}
+\begin{document}
+	
+	\begin{titlepage}
+		\newgeometry{left=1.6in, right=2in}
+		\vspace*{1.5cm}
+		
+		\noindent  \textcolor{gray}{\large Mikkel Aslak Sokki} \\
+		\vspace{1cm}
+		
+		\noindent \textbf{\Large Symmetry breaking and Goldstone bosons in \(\chi\)PT} \\
+		\vspace{0.5cm}
+		
+		
+		
+		
+		
+		\vspace{7cm}
+		\noindent  Project in Applied Physics and Mathematics \\
+		Supervisor: Jens Oluf Andersen \\
+	
+		December 2024 \\
+		
+		\vspace{0.2cm}
+		\noindent Norwegian University of Science and Technology \\
+		Faculty of Natural Sciences \\
+		Department of Physics \\
+		
+		\begin{figure}[h]
+			\includegraphics[width=0.28\textwidth]{ntnu_basic.png}
+		\end{figure}
+	\end{titlepage}
+	\restoregeometry
+%	\myemptypage %empty page such that the abstract starts at the first right hand side after the title page
+	%\end{comment}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\newpage
+	\tableofcontents
+	%\addcontentsline{toc}{chapter}{\protect\numberline{}Contents}
+	
+	%\maketitle
+
+	\pagenumbering{arabic}
+	
+	\chapter*{Abstract}
+	\input{abstract}
+	
+	\chapter{Introduction}
+	\input{introduction}
+	
+
+	
+
+	
+	
+	\chapter{Spontaneous and explicit symmetry breaking}
+	\input{symmetry breaking}
+	\chapter{Symmetries}
+	\input{SigmaSU2}
+	%\input{SU2xSU2sigmascalarfields}
+	%\input{vectoraxialcurrents}
+	
+	\chapter{Self energy and renormalization}
+	\input{selfenergy}
+	
+	\chapter{Bosonic and Fermionic propagators}
+	\input{Boson and Fermion Propagators.tex}
+	%\input{TreeLevel.tex}
+	
+	\chapter{Fermion propagator in holomorphic (complex) representation}
+	\label{chap:bosonfermionpropagators}
+	\input{Fermion propagator holograpghic representation}
+	
+	\chapter{Conclusions and outlook}
+	\input{conclusion}
+	
+
+	\newpage
+	\appendix
+	
+	\chapter{Notation and conventions}
+	\input{notation and conventions}
+	\fancyhf{} %clear the header, it should be empty for the appendices
+	\renewcommand{\headrulewidth}{0pt} %no rule
+	\fancyfoot[C]{\thepage} %set the page numbers in the center of the footer instead 
+	
+	%it is possible to set a different page numbering style for the appendix, but I personally just continued with the same page numbering as the main content as I find that more tidy
+	\pagenumbering{roman}
+	\setcounter{page}{1}
+	%\addcontentsline{toc}{chapter}{\protect\numberline{}Appendices:}
+	
+	\input{appendixcalculations.tex}
+	
+	
+	\newpage
+
+	
+	\printbibliography[title=References]
+	
+\end{document}

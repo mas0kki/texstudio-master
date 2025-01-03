@@ -1,0 +1,74 @@
+%basic packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[toc,page]{appendix}
+\usepackage{fncychap}
+\usepackage[lmargin=1.5in, rmargin=1in, tmargin=1in, bmargin=1in]{geometry}
+%\usepackage{appendixnumberbeamer}
+\usepackage[bf]{caption} %makes float captions bold
+\usepackage{comment}
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage{pdftexcmds}
+\usepackage{epstopdf}
+\usepackage{xparse}
+\usepackage{chngcntr}
+\usepackage{hyperref}
+%\usepackage{physics}
+
+\setcounter{tocdepth}{2} %table of contents number depth for subsections (2 = x.x.x)
+\setcounter{secnumdepth}{4} %numbering depth for headers for subsections in the text(4 = x.x.x.x)
+\usepackage{url} %to include urls
+\usepackage{parskip}
+\usepackage{graphicx} %to include graphics
+
+
+\graphicspath{ {~/Documents/Master/} }
+\usepackage{svg}
+
+\usepackage{pgfplots}
+\usetikzlibrary{arrows.meta}
+\pgfplotsset{compat=1.8}
+%%%% TIKZ and stuff
+\usepackage{tikz}
+\usepackage{tikz-feynman}
+\usepackage{tikz}
+\usepackage{feynmp-auto}
+\tikzset{
+	cross/.style={path picture={\draw[black]
+			(path picture bounding box.south east) -- (path picture bounding box.north west)
+			(path picture bounding box.south west) -- (path picture bounding box.north east);}}
+} %%% to put in the cross in the counterterm
+
+
+
+
+%\usepackage[bf]{caption} %makes float captions bold
+%\usepackage{array, booktabs} %to make better tables
+%\usepackage{graphicx} %to include graphics
+%\usepackage{float} %to include floats
+%\usepackage[export]{adjustbox} %to adjust floats
+%\usepackage{subfig} %to include subfigures
+%\usepackage{chngcntr} %will make it possible to change the counter for tables, figures etc. such as below
+%\usepackage{chngcntr}
+\counterwithin{figure}{chapter} %change counter for figures within sections (also possible to choose for each chapter
+%\counterwithin{table}{section} %change counter for tables within sections
+
+
+
+%math 
+\usepackage{amssymb,amsmath,amsfonts,mathtools,amsthm,mathrsfs,bbold}
+%hide page number when page empty
+\usepackage{emptypage}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage{siunitx} %includes SI-units
+\usepackage{array, booktabs} %to make better tables
+%\usepackage{eulervm} %This changes the font of all variables
+
+% Bibliography & referenses
+\usepackage[backend=bibtex,bibencoding=ascii,style=numeric,labelnumber]{biblatex}
+\addbibresource{References.bib}
+\renewcommand{\bibname}{References}
+
